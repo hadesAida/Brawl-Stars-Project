@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brawl Stars Characters</title>
+</head>
+<body>
+    <h1>Welcome to Brawl Stars API</h1>
+    <h2>Go to API Characters to see the characters list.</h2>
+
+    <h3>Character List:</h3>
+    <ul>
+        {% for character in characters %}
+            <li>
+                <strong>{{ character.name }}</strong>: {{ character.description }} - Role: {{ character.role.name }}
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

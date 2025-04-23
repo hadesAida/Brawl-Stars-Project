@@ -1,0 +1,54 @@
+<div class="add-brawler-container">
+  <h2>Добавить нового бойца</h2>
+
+  <form (ngSubmit)="addBrawler()">
+    <label class="form-label">Имя:
+      <input [(ngModel)]="newBrawler.name" name="name" required />
+    </label>
+
+    <label class="form-label">Класс:
+      <input [(ngModel)]="brawlerClassName" name="brawlerClassName" placeholder="Класс" />
+    </label>
+
+    <label class="form-label">Категория:
+      <select [ngModel]="newBrawler.category?.name" (ngModelChange)="onCategoryChange($event)" name="category">
+        <option value="Любимые">Любимые</option>
+        <option value="Убежища">Убежища</option>
+      </select>
+    </label>
+    
+    <label class="form-label">URL изображения:
+      <input [(ngModel)]="newBrawler.image_url" name="imageUrl" />
+    </label>
+
+    <label class="form-label">Редкость:
+      <input [(ngModel)]="newBrawler.rarity" name="rarity" />
+    </label>
+
+    <label class="form-label">Описание:
+      <textarea [(ngModel)]="newBrawler.description" name="description"></textarea>
+    </label>
+
+    <label class="form-label">Супер — Название:
+      <input [(ngModel)]="superName" name="superName" />
+    </label>
+
+    <label class="form-label">Супер — Описание:
+      <textarea [(ngModel)]="superDescription" name="superDescription"></textarea>
+    </label>
+
+    <label class="form-label">Титул:
+      <input [(ngModel)]="newBrawler.title" name="title" />
+    </label>
+
+    <label class="form-label">Факты (через запятую):
+      <input [(ngModel)]="factsInput" name="factsInput" />
+    </label>
+
+    <label class="form-label">Советы (через запятую):
+      <input [(ngModel)]="tipsInput" name="tipsInput" />
+    </label>
+
+    <button type="submit">Добавить бойца</button>
+  </form>
+</div>

@@ -1,0 +1,43 @@
+<div class="category-container">
+  <button *ngIf="!isLoggedIn()" (click)="navigateToLogin()">Войти</button>
+
+  <h2>Любимые
+    <button (click)="navigateToAdd('Любимые')">➕</button>
+  </h2>
+
+  <div class="brawler-list" *ngIf="favorites.length > 0">
+    <div *ngFor="let brawler of favorites" class="brawler-card">
+      <button class="delete-btn" (click)="deleteBrawler(brawler.id)">✖</button>
+      <img [src]="brawler.image_url" [alt]="brawler.name" />
+      <h3>{{ brawler.name }}</h3>
+      <p>{{ brawler.brawler_class?.name }}</p>
+      <a [routerLink]="['/brawler', brawler.id]" class="btn-login">Подробнее</a>
+
+    </div>
+  </div>
+
+  <h2>Убежища
+    <button (click)="navigateToAdd('Убежища')">➕</button>
+  </h2>
+
+  <div class="brawler-list" *ngIf="shelters.length > 0">
+    <div *ngFor="let brawler of shelters" class="brawler-card">
+      <button class="delete-btn" (click)="deleteBrawler(brawler.id)">✖</button>
+      <img [src]="brawler.image_url" [alt]="brawler.name" />
+      <h3>{{ brawler.name }}</h3>
+      <p>{{ brawler.brawler_class?.name }}</p>
+      <a [routerLink]="['/brawler', brawler.id]" class="btn-login">Подробнее</a>
+    </div>
+  </div>
+
+  <h2>Все Бравлеры</h2>
+  <div class="brawler-list" *ngIf="allBrawlers.length > 0">
+    <div *ngFor="let brawler of allBrawlers" class="brawler-card">
+      <button class="delete-btn" (click)="deleteBrawler(brawler.id)">✖</button>
+      <img [src]="brawler.image_url" [alt]="brawler.name" />
+      <h3>{{ brawler.name }}</h3>
+      <p>{{ brawler.rarity }}</p>
+      <a [routerLink]="['/brawler', brawler.id]" class="btn-login">Подробнее</a>
+    </div>
+  </div>
+</div>

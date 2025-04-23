@@ -1,0 +1,9 @@
+<nav class="navbar">
+    <button 
+      *ngIf="isLoggedIn() && !isLoginPage()" 
+      (click)="logout()" 
+      class="logout-btn">
+      Выйти
+    </button>
+  </nav>
+  

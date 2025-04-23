@@ -1,0 +1,11 @@
+body {
+    margin: 0;
+    font-family: 'Lilita One', cursive;
+    background-image: url('https://i.ytimg.com/vi/_bKRrD9CK9w/hq720.jpg?sqp=-oaymwEXCK4FEIIDSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLB8DFPb9OeLB_UEyEvpuS5IxtGEdw');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    color: white;
+  }
+  

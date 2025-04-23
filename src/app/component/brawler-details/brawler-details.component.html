@@ -1,0 +1,41 @@
+<div *ngIf="brawler" class="brawler-details">
+  <h2>{{ brawler.name }}</h2>
+
+  <img 
+    *ngIf="brawler.image_url" 
+    [src]="brawler.image_url" 
+    alt="{{ brawler.name }}" 
+    class="brawler-image" 
+  />
+
+  <h3 class="section-title">Класс:</h3>
+  <span class="brawler-class">{{ brawler.brawler_class?.name }}</span>
+
+  <h3 class="section-title">Категория:</h3>
+  <span class="brawler-category">{{ brawler.category?.name }}</span>
+
+  <h3 class="section-title">Редкость:</h3>
+  <span class="rarity" [ngClass]="getRarityClass(brawler.rarity || '')">
+    {{ brawler.rarity }}
+  </span>
+
+  <p>{{ brawler.description }}</p>
+
+  <!-- Здесь мы выводим supername и superdescription -->
+  <h3 class="section-title">Супер:</h3>
+  <p>{{ brawler.super_name }}: {{ brawler.super_description }}</p> 
+
+
+  <h3 class="section-title">Титул:</h3>
+  <p class="title">{{ brawler.title }}</p>
+
+  <h3 class="section-title">Интересные факты:</h3>
+  <ul>
+    <li *ngFor="let fact of brawler.facts">{{ fact.text }}</li>
+  </ul>
+
+  <h3 class="section-title">Советы по использованию:</h3>
+  <ul>
+    <li *ngFor="let tip of brawler.tips">{{ tip.text }}</li>
+  </ul>
+</div>

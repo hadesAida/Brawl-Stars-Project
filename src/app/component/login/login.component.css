@@ -1,0 +1,27 @@
+.login-container {
+    max-width: 350px;
+    margin: 80px auto;
+    background: linear-gradient(145deg, #3c3b6e, #1f1e3a);
+    padding: 40px 32px 32px; 
+    border-radius: 20px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.9);
+    text-align: center;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 20px;
+    margin-bottom: 50px; 
+  }
+  
+  input {
+    padding: 12px;
+    border-radius: 12px;
+    border: 2px solid #000;
+    font-family: 'Lilita One', cursive;
+    font-size: 16px;
+    outline: none;
+  }
+  

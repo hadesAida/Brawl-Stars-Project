@@ -1,0 +1,107 @@
+/* ЗАГОЛОВКИ */
+.section-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-top: 25px;
+  background: linear-gradient(90deg, #FFAB0C, #FDD614, #FFAB0C);
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: gradientFlow 3s linear infinite, goldGlow 1.5s infinite alternate;
+  text-shadow: 0px 0px 10px rgba(255, 215, 0, 0.8),
+               0px 0px 20px rgba(255, 215, 0, 0.6);
+}
+
+@keyframes gradientFlow {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 200% 50%; }
+}
+
+@keyframes goldGlow {
+  from {
+    text-shadow: 0 0 8px rgba(255, 215, 0, 0.6),
+                 0 0 16px rgba(255, 215, 0, 0.4);
+  }
+  to {
+    text-shadow: 0 0 14px rgba(255, 255, 100, 0.9),
+                 0 0 28px rgba(255, 215, 0, 0.7);
+  }
+}
+
+/* ИЗОБРАЖЕНИЕ */
+.brawler-image {
+  width: 250px;
+  height: auto;
+  border-radius: 20px;
+  margin-bottom: 15px;
+  box-shadow: 0px 0px 15px rgba(255, 215, 0, 0.5);
+}
+
+/* РЕДКОСТЬ */
+.rarity {
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 8px;
+  color: white;
+}
+
+.rarity-common {
+  background-color: #a0a0a0;
+}
+.rarity-rare {
+  background-color: #4caf50;
+}
+.rarity-super_rare {
+  background-color: #2196f3;
+}
+.rarity-epic {
+  background-color: #9c27b0;
+}
+.rarity-mythic {
+  background-color: #e91e63;
+}
+.rarity-legendary {
+  background-color: #ff9800;
+}
+.rarity-chromatic {
+  background: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet);
+  color: black;
+}
+
+/* СПИСКИ */
+ul {
+  padding-left: 0;
+  list-style-type: none;
+  margin-top: 10px;
+}
+
+ul li::before {
+  content: "★ ";
+  color: gold;
+  font-weight: bold;
+}
+p,
+li,
+.brawler-details span,
+.brawler-details {
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: normal;
+  color: #fff;
+  text-shadow: 1px 1px 2px #000;
+  text-align: left;
+  line-height: 1.6;
+}
+
+
+/* ОБЩИЙ СТИЛЬ */
+.brawler-details {
+  padding: 20px;
+  border-radius: 15px;
+  max-width: 700px;
+  margin: auto;
+  color: #fff;
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.2);
+  
+}
